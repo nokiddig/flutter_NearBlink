@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Bloggo',
+      title: 'NearBLink',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: COLOR_CONST.BLUE_DARK),
         useMaterial3: true,

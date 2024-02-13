@@ -29,5 +29,4 @@ class MODEL_CONST{
   static const String COLLECTION_NOTIFICATION = "notification";
 
   static const String FIELD_INFOMATION = "information";
-
 }

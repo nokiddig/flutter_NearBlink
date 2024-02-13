@@ -134,6 +134,7 @@ class NewFeed extends StatelessWidget {
             itemCount: data.length,
             itemBuilder: (context, index) {
               Blog blog = data[index];
+              return ABlogDetail(blog);
               return Padding(
                 padding: const EdgeInsets.only(top: 5, bottom: 5),
                 child: SizedBox(

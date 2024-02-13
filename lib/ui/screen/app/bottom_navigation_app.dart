@@ -20,13 +20,14 @@ class BottomNavigationApp extends StatefulWidget {
 class _BottomNavigationAppState extends State<BottomNavigationApp> {
   int _selectedIndex = 0;
   int _selectedView = 0;
-  final String _title = "Bloggo";
+  final String _title = "NearBLink";
   static final List<Widget> _widgetOptions = <Widget>[
     const HomeTab(),
     CategoryTab(),
-    //const NotificationTab(),
+    const NotificationTab(),
     const MenuTab(),
   ];
+
 
   @override
   void setState(VoidCallback fn) {
@@ -74,8 +75,8 @@ class _BottomNavigationAppState extends State<BottomNavigationApp> {
           items: [
             bottomNavItem("Home", Icons.home_outlined, Icons.home),
             bottomNavItem("Category", Icons.category_outlined, Icons.category),
-            // bottomNavItem("Notifications",
-            //     Icons.notification_important_outlined, Icons.notifications),
+            bottomNavItem("Notifications",
+                Icons.notification_important_outlined, Icons.notifications),
             bottomNavItem("Menu", Icons.menu, Icons.menu_open),
           ],
           onTap: (value) {
