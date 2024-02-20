@@ -1,9 +1,10 @@
 import 'package:blog_app/ui/screen/item/list_blog.dart';
-import 'package:blog_app/viewmodel/blog_viewmodel.dart';
 import 'package:flutter/material.dart';
 
+import '../../repository/blog_repository.dart';
+
 class CustomSearch extends SearchDelegate {
-  BlogViewmodel blogViewmodel = BlogViewmodel();
+  BlogRepository blogViewmodel = BlogRepository();
 
   @override
   List<Widget>? buildActions(BuildContext context) {

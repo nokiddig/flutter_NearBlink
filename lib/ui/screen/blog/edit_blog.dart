@@ -1,9 +1,10 @@
 import 'package:blog_app/model/blog.dart';
 import 'package:blog_app/services/save_account.dart';
 import 'package:blog_app/utils/constain/my_const.dart';
-import 'package:blog_app/viewmodel/blog_viewmodel.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+
+import '../../../repository/blog_repository.dart';
 
 class EditBlog extends StatefulWidget {
   Blog blog;
@@ -150,7 +151,7 @@ class _EditBlogState extends State<EditBlog> {
     String title = _controllerTitle.text;
     String content = _controllerContent.text;
     String image = _controllerImage.text;
-    BlogViewmodel viewmodel = BlogViewmodel();
+    BlogRepository viewmodel = BlogRepository();
     viewmodel.edit(Blog(widget.blog.id, title, content, image, SaveAccount.currentEmail?? ""
         , _selectedValue??'1', Timestamp.fromDate(DateTime.now())));
   }

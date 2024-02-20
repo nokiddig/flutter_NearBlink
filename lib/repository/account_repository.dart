@@ -1,18 +1,18 @@
+import 'package:blog_app/repository/repository.dart';
 import 'package:blog_app/utils/constain/firebase_model_const.dart';
-import 'package:blog_app/viewmodel/viewmodel.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 import '../model/account.dart';
 
-class AccountViewModel extends ViewModel<Account>{
+class AccountRepository extends Repository<Account>{
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
-  static final AccountViewModel _instance = AccountViewModel._internal();
+  static final AccountRepository _instance = AccountRepository._internal();
 
-  factory AccountViewModel() {
+  factory AccountRepository() {
     return _instance;
   }
 
-  AccountViewModel._internal();
+  AccountRepository._internal();
 
   @override
   Future<void> add(Account account)async{

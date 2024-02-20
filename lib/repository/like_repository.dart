@@ -1,18 +1,18 @@
 import 'package:blog_app/model/like.dart';
+import 'package:blog_app/repository/repository.dart';
 import 'package:blog_app/services/save_account.dart';
 import 'package:blog_app/utils/constain/firebase_model_const.dart';
-import 'package:blog_app/viewmodel/viewmodel.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class LikeViewmodel extends ViewModel<Like>{
+class LikeRepository extends Repository<Like>{
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
-  static final LikeViewmodel _instance = LikeViewmodel._internal();
+  static final LikeRepository _instance = LikeRepository._internal();
 
-  factory LikeViewmodel() {
+  factory LikeRepository() {
     return _instance;
   }
 
-  LikeViewmodel._internal();
+  LikeRepository._internal();
   
   @override
   Future<void> add(Like t) async {

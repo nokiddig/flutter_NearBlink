@@ -1,19 +1,19 @@
 import 'package:blog_app/model/save.dart';
+import 'package:blog_app/repository/repository.dart';
 import 'package:blog_app/services/save_account.dart';
-import 'package:blog_app/viewmodel/viewmodel.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 import '../utils/constain/firebase_model_const.dart';
 
-class SaveViewmodel extends ViewModel<Save>{
+class SaveRepository extends Repository<Save>{
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
-  static final SaveViewmodel _instance = SaveViewmodel._internal();
+  static final SaveRepository _instance = SaveRepository._internal();
 
-  factory SaveViewmodel() {
+  factory SaveRepository() {
     return _instance;
   }
 
-  SaveViewmodel._internal();
+  SaveRepository._internal();
 
   @override
   Future<void> add(Save t) async {

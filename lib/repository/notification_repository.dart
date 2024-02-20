@@ -1,17 +1,17 @@
 import 'package:blog_app/model/notification.dart';
+import 'package:blog_app/repository/repository.dart';
 import 'package:blog_app/utils/constain/firebase_model_const.dart';
-import 'package:blog_app/viewmodel/viewmodel.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class NotificationViewmodel extends ViewModel<Noti>{
+class NotificationRepository extends Repository<Noti>{
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
-  static final NotificationViewmodel _instance = NotificationViewmodel._internal();
+  static final NotificationRepository _instance = NotificationRepository._internal();
 
-  factory NotificationViewmodel() {
+  factory NotificationRepository() {
     return _instance;
   }
 
-  NotificationViewmodel._internal();
+  NotificationRepository._internal();
 
   @override
   Future<void> add(Noti t) async {

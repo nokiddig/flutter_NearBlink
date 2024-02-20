@@ -1,18 +1,18 @@
 import 'package:blog_app/model/category.dart';
-import 'package:blog_app/viewmodel/viewmodel.dart';
+import 'package:blog_app/repository/repository.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 import '../utils/constain/firebase_model_const.dart';
 
-class CategoryViewmodel extends ViewModel<Category>{
+class CategoryRepository extends Repository<Category>{
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
-  static final CategoryViewmodel _instance = CategoryViewmodel._internal();
+  static final CategoryRepository _instance = CategoryRepository._internal();
 
-  factory CategoryViewmodel() {
+  factory CategoryRepository() {
     return _instance;
   }
 
-  CategoryViewmodel._internal();
+  CategoryRepository._internal();
 
   Future<String> genNewId() async {
     QuerySnapshot querySnapshot = await _firestore

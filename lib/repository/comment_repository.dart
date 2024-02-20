@@ -1,17 +1,17 @@
 import 'package:blog_app/model/comment.dart';
+import 'package:blog_app/repository/repository.dart';
 import 'package:blog_app/utils/constain/firebase_model_const.dart';
-import 'package:blog_app/viewmodel/viewmodel.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class CommentViewmodel extends ViewModel<Comment>{
+class CommentRepository extends Repository<Comment>{
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
-  static final CommentViewmodel _instance = CommentViewmodel._internal();
+  static final CommentRepository _instance = CommentRepository._internal();
 
-  factory CommentViewmodel() {
+  factory CommentRepository() {
     return _instance;
   }
 
-  CommentViewmodel._internal();
+  CommentRepository._internal();
 
   Future<String> genNewId() async {
     QuerySnapshot querySnapshot = await _firestore

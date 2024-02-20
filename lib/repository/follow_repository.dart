@@ -1,20 +1,20 @@
 import 'package:blog_app/model/follow.dart';
+import 'package:blog_app/repository/repository.dart';
 import 'package:blog_app/services/save_account.dart';
-import 'package:blog_app/viewmodel/viewmodel.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 import '../utils/constain/my_const.dart';
 
-class FollowViewmodel extends ViewModel<Follow>{
+class FollowRepository extends Repository<Follow>{
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
-  static final FollowViewmodel _instance = FollowViewmodel._internal();
+  static final FollowRepository _instance = FollowRepository._internal();
 
-  factory FollowViewmodel() {
+  factory FollowRepository() {
     return _instance;
   }
 
-  FollowViewmodel._internal();
+  FollowRepository._internal();
 
   @override
   Future<void> add(Follow t) async {

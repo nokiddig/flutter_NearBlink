@@ -1,9 +1,9 @@
 import 'package:blog_app/services/save_account.dart';
 import 'package:blog_app/utils/constain/my_const.dart';
-import 'package:blog_app/viewmodel/account_viewmodel.dart';
 import 'package:flutter/material.dart';
 
 import '../../../model/account.dart';
+import '../../../repository/account_repository.dart';
 
 class EditProfile extends StatefulWidget {
   const EditProfile({super.key});
@@ -18,7 +18,7 @@ class _EditProfileState extends State<EditProfile> {
   int selectedGender = 0; // nam
   final _formKey = GlobalKey<FormState>();
 
-  AccountViewModel accountViewModel = AccountViewModel();
+  AccountRepository accountViewModel = AccountRepository();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -135,7 +135,7 @@ class _EditProfileState extends State<EditProfile> {
   }
 
   void editProfile(Account account) {
-    AccountViewModel accountViewModel = AccountViewModel();
+    AccountRepository accountViewModel = AccountRepository();
     account.avatarPath = _avatarController.text;
     account.name = _nameController.text;
     account.gender = selectedGender;

@@ -2,9 +2,10 @@ import 'package:blog_app/model/notification.dart';
 import 'package:blog_app/services/save_account.dart';
 import 'package:blog_app/ui/screen/blog/blog_detail.dart';
 import 'package:blog_app/utils/constain/my_const.dart';
-import 'package:blog_app/viewmodel/blog_viewmodel.dart';
-import 'package:blog_app/viewmodel/notification_viewmodel.dart';
 import 'package:flutter/material.dart';
+
+import '../../repository/blog_repository.dart';
+import '../../repository/notification_repository.dart';
 
 class NotificationTab extends StatefulWidget {
   const NotificationTab({super.key});
@@ -14,7 +15,7 @@ class NotificationTab extends StatefulWidget {
 }
 
 class _NotificationTabState extends State<NotificationTab> {
-  NotificationViewmodel notificationViewmodel = NotificationViewmodel();
+  NotificationRepository notificationViewmodel = NotificationRepository();
   @override
   Widget build(BuildContext context) {
     return StreamBuilder(
@@ -51,7 +52,7 @@ class _NotificationTabState extends State<NotificationTab> {
           context: context,
           builder: (context) => AlertDialog(
             content: StreamBuilder(
-              stream: BlogViewmodel()
+              stream: BlogRepository()
                   .getById(notification.information),
               builder: (context, snapshot) {
                 if (snapshot.hasData){

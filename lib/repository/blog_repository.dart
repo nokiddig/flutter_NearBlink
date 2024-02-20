@@ -1,19 +1,18 @@
 import 'package:blog_app/model/blog.dart';
-import 'package:blog_app/viewmodel/follow_viewmodel.dart';
-import 'package:blog_app/viewmodel/viewmodel.dart';
+import 'package:blog_app/repository/repository.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 import '../utils/constain/firebase_model_const.dart';
 
-class BlogViewmodel extends ViewModel<Blog> {
+class BlogRepository extends Repository<Blog> {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
-  static final BlogViewmodel _instance = BlogViewmodel._internal();
+  static final BlogRepository _instance = BlogRepository._internal();
 
-  factory BlogViewmodel() {
+  factory BlogRepository() {
     return _instance;
   }
 
-  BlogViewmodel._internal();
+  BlogRepository._internal();
 
   Future<String> genNewId() async {
     QuerySnapshot querySnapshot =

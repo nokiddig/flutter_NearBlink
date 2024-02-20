@@ -1,12 +1,12 @@
 import 'package:blog_app/ui/screen/blog/blog_detail.dart';
 import 'package:blog_app/utils/constain/my_const.dart';
-import 'package:blog_app/viewmodel/blog_viewmodel.dart';
-import 'package:blog_app/viewmodel/save_viewmodel.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 import '../../../model/blog.dart';
 import '../../../model/save.dart';
+import '../../../repository/blog_repository.dart';
+import '../../../repository/save_repository.dart';
 
 class SaveTab extends StatefulWidget {
   const SaveTab({super.key});
@@ -16,8 +16,8 @@ class SaveTab extends StatefulWidget {
 }
 
 class _SaveTabState extends State<SaveTab> {
-  SaveViewmodel saveViewmodel = SaveViewmodel();
-  BlogViewmodel blogViewmodel = BlogViewmodel();
+  SaveRepository saveViewmodel = SaveRepository();
+  BlogRepository blogViewmodel = BlogRepository();
   @override
   Widget build(BuildContext context) {
     return Scaffold(

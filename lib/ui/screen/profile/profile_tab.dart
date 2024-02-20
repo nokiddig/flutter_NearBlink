@@ -4,13 +4,13 @@ import 'package:blog_app/ui/screen/blog/blog_detail.dart';
 import 'package:blog_app/ui/screen/blog/create_blog.dart';
 import 'package:blog_app/ui/screen/profile/edit_profile.dart';
 import 'package:blog_app/utils/constain/my_const.dart';
-import 'package:blog_app/viewmodel/account_viewmodel.dart';
-import 'package:blog_app/viewmodel/blog_viewmodel.dart';
-import 'package:blog_app/viewmodel/follow_viewmodel.dart';
 import 'package:flutter/material.dart';
 
 import '../../../model/account.dart';
 import '../../../model/blog.dart';
+import '../../../repository/account_repository.dart';
+import '../../../repository/blog_repository.dart';
+import '../../../repository/follow_repository.dart';
 
 class ProfileTab extends StatefulWidget {
   ProfileTab({super.key, required this.email});
@@ -20,8 +20,8 @@ class ProfileTab extends StatefulWidget {
 }
 
 class _ProfileTabState extends State<ProfileTab> {
-  AccountViewModel accountViewModel = AccountViewModel();
-  BlogViewmodel blogViewModel = BlogViewmodel();
+  AccountRepository accountViewModel = AccountRepository();
+  BlogRepository blogViewModel = BlogRepository();
   
   @override
   Widget build(BuildContext context) {
@@ -146,7 +146,7 @@ class _ProfileTabState extends State<ProfileTab> {
   }
 
   Widget genFollowButton(String followingEmail) {
-    FollowViewmodel viewmodel = FollowViewmodel();
+    FollowRepository viewmodel = FollowRepository();
     return StreamBuilder<bool>(
       stream: viewmodel.checkFollow( SaveAccount.currentEmail!, followingEmail),
       builder: (context, snapshot) {
@@ -188,7 +188,7 @@ class _ProfileTabState extends State<ProfileTab> {
 class _ProfileInfoRow extends StatelessWidget {
   final String email;
   Stream<List<Blog>> blogStream;
-  FollowViewmodel followViewmodel = FollowViewmodel();
+  FollowRepository followViewmodel = FollowRepository();
   
 
   _ProfileInfoRow(this.email, this.blogStream);
@@ -258,7 +258,7 @@ class ProfileInfoItem {
 
 class _TopPortion extends StatelessWidget {
   Account? account;
-  AccountViewModel viewModel = AccountViewModel();
+  AccountRepository viewModel = AccountRepository();
 
   _TopPortion(Account? this.account, {Key? key}) : super(key: key);
 

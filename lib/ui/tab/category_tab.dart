@@ -1,8 +1,9 @@
 import 'package:blog_app/model/category.dart';
 import 'package:blog_app/ui/screen/item/list_blog.dart';
-import 'package:blog_app/viewmodel/blog_viewmodel.dart';
-import 'package:blog_app/viewmodel/category_viewmodel.dart';
 import 'package:flutter/material.dart';
+
+import '../../repository/blog_repository.dart';
+import '../../repository/category_repository.dart';
 
 class CategoryTab extends StatefulWidget {
   static final CategoryTab _instance = CategoryTab._internal();
@@ -18,8 +19,8 @@ class CategoryTab extends StatefulWidget {
 }
 
 class _CategoryTabState extends State<CategoryTab> {
-  CategoryViewmodel categoryViewmodel = CategoryViewmodel();
-  BlogViewmodel blogViewmodel = BlogViewmodel();
+  CategoryRepository categoryViewmodel = CategoryRepository();
+  BlogRepository blogViewmodel = BlogRepository();
   
   @override
   Widget build(BuildContext context) {
