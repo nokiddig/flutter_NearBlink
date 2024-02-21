@@ -1,6 +1,6 @@
 
 import 'package:blog_app/ui/screen/profile/profile_tab.dart';
-import 'package:blog_app/utils/constain/my_const.dart';
+import 'package:blog_app/utils/constant/my_const.dart';
 import 'package:flutter/material.dart';
 
 import '../../../model/account.dart';

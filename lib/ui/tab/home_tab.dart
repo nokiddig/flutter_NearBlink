@@ -1,7 +1,6 @@
 import 'package:blog_app/model/blog.dart';
 import 'package:blog_app/ui/screen/blog/blog_detail.dart';
-import 'package:blog_app/utils/constain/font_const.dart';
-import 'package:blog_app/utils/constain/my_const.dart';
+import 'package:blog_app/utils/constant/my_const.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 

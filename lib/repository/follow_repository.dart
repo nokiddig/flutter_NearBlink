@@ -3,7 +3,7 @@ import 'package:blog_app/repository/repository.dart';
 import 'package:blog_app/services/save_account.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-import '../utils/constain/my_const.dart';
+import '../utils/constant/my_const.dart';
 
 class FollowRepository extends Repository<Follow>{
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;

@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
+//source: https://github.com/hientrung/flutter-viewmodel/blob/master/lib/src/view_model.dart
 
 ///Base class used to create view model
 abstract class ViewModel extends DiagnosticableTree {

@@ -1,6 +1,4 @@
-import 'package:blog_app/utils/constain/color_const.dart';
-import 'package:blog_app/utils/constain/font_const.dart';
-import 'package:blog_app/utils/constain/my_const.dart';
+import 'package:blog_app/utils/constant/my_const.dart';
 import 'package:flutter/material.dart';
 
 import '../../tab/category_tab.dart';
@@ -24,6 +22,7 @@ class _BottomNavigationAppState extends State<BottomNavigationApp> {
   static final List<Widget> _widgetOptions = <Widget>[
     const HomeTab(),
     CategoryTab(),
+    const NotificationTab(),
     const NotificationTab(),
     const MenuTab(),
   ];
@@ -77,6 +76,7 @@ class _BottomNavigationAppState extends State<BottomNavigationApp> {
             bottomNavItem("Category", Icons.category_outlined, Icons.category),
             bottomNavItem("Notifications",
                 Icons.notification_important_outlined, Icons.notifications),
+            bottomNavItem("Message", Icons.message_outlined, Icons.message),
             bottomNavItem("Menu", Icons.menu, Icons.menu_open),
           ],
           onTap: (value) {

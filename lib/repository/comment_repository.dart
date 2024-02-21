@@ -1,6 +1,6 @@
 import 'package:blog_app/model/comment.dart';
 import 'package:blog_app/repository/repository.dart';
-import 'package:blog_app/utils/constain/firebase_model_const.dart';
+import 'package:blog_app/utils/constant/firebase_model_const.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class CommentRepository extends Repository<Comment>{

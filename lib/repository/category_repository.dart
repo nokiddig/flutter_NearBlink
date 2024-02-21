@@ -2,7 +2,7 @@ import 'package:blog_app/model/category.dart';
 import 'package:blog_app/repository/repository.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-import '../utils/constain/firebase_model_const.dart';
+import '../utils/constant/firebase_model_const.dart';
 
 class CategoryRepository extends Repository<Category>{
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;

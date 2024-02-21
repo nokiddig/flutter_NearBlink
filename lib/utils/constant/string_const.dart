@@ -9,6 +9,7 @@ class STRING_CONST{
   static const String IMAGE_DEFAULT = "assets/images/default.jpg";
   static const String NETWORKIMAGE_DEFAULT = "https://cdn.vectorstock.com/i/preview-1x/65/30/default-image-icon-missing-picture-page-vector-40546530.jpg";
   static const String LOGOUT = "Logout";
+  static const String ACTIVITIES = "Recent activity";
   static const String PROFILE = "Profile";
   static const String SAVED = "Saved";
   static const String DARKMODE = "DarkMode";

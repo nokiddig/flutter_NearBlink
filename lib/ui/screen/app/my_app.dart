@@ -1,4 +1,4 @@
-import 'package:blog_app/utils/constain/color_const.dart';
+import 'package:blog_app/utils/constant/my_const.dart';
 import 'package:flutter/material.dart';
 import '../splash_screen.dart';
 

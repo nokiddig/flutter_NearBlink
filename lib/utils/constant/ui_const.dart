@@ -17,6 +17,7 @@ class UI_CONST{
   static const Icon ICON_SAVE = Icon(Icons.bookmark_border);
   static const Icon ICON_LOGOUT = Icon(Icons.logout);
   static const Icon ICON_DARKMODE = Icon(Icons.nightlight_outlined);
+  static const Icon ICON_ACTIVITIES = Icon(Icons.list);
   static const Divider DIVIDER1 =  Divider(height: 1);
   static const Divider DIVIDER2 =  Divider(height: 2);
   static const BorderSide BORDER_SIDE = BorderSide(width: 1, color: Colors.black12);

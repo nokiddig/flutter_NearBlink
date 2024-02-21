@@ -1,6 +1,6 @@
 import 'package:blog_app/model/blog.dart';
 import 'package:blog_app/services/save_account.dart';
-import 'package:blog_app/utils/constain/my_const.dart';
+import 'package:blog_app/utils/constant/my_const.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 

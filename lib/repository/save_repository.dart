@@ -3,7 +3,7 @@ import 'package:blog_app/repository/repository.dart';
 import 'package:blog_app/services/save_account.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-import '../utils/constain/firebase_model_const.dart';
+import '../utils/constant/firebase_model_const.dart';
 
 class SaveRepository extends Repository<Save>{
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;

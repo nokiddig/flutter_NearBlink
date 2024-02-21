@@ -1,7 +1,7 @@
 import 'package:blog_app/model/like.dart';
 import 'package:blog_app/repository/repository.dart';
 import 'package:blog_app/services/save_account.dart';
-import 'package:blog_app/utils/constain/firebase_model_const.dart';
+import 'package:blog_app/utils/constant/firebase_model_const.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class LikeRepository extends Repository<Like>{

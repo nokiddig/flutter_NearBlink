@@ -4,7 +4,7 @@ import 'package:blog_app/ui/screen/profile/edit_profile.dart';
 import 'package:blog_app/ui/screen/login/signin_screen.dart';
 import 'package:blog_app/ui/screen/profile/profile_tab.dart';
 import 'package:blog_app/ui/screen/blog/save_tab.dart';
-import 'package:blog_app/utils/constain/my_const.dart';
+import 'package:blog_app/utils/constant/my_const.dart';
 import 'package:flutter/material.dart';
 
 class MenuTab extends StatefulWidget {
@@ -39,7 +39,7 @@ class _MenuTabState extends State<MenuTab> {
           leading: const Icon(Icons.manage_accounts_outlined),
           title: const Text(STRING_CONST.EDIT_PROFILE),
           onTap: (){
-            Route route = MaterialPageRoute(builder: (context) => EditProfile());
+            Route route = MaterialPageRoute(builder: (context) => const EditProfile());
             Navigator.push(context, route);
           },
           trailing: const Icon(Icons.navigate_next),
@@ -49,8 +49,17 @@ class _MenuTabState extends State<MenuTab> {
           leading: UI_CONST.ICON_SAVE,
           title: const Text(STRING_CONST.SAVED),
           onTap: (){
-            Route route = MaterialPageRoute(builder: (context) => SaveTab(),);
+            Route route = MaterialPageRoute(builder: (context) => const SaveTab(),);
             Navigator.push(context, route);
+          },
+          trailing: const Icon(Icons.navigate_next),
+        ),
+        UI_CONST.DIVIDER1,
+        ListTile(
+          leading: UI_CONST.ICON_ACTIVITIES,
+          title: const Text(STRING_CONST.ACTIVITIES),
+          onTap: (){
+            throw UnimplementedError();
           },
           trailing: const Icon(Icons.navigate_next),
         ),
@@ -59,7 +68,7 @@ class _MenuTabState extends State<MenuTab> {
           leading: UI_CONST.ICON_LOGOUT,
           title: const Text(STRING_CONST.LOGOUT),
           onTap: (){
-            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => SignInScreen()));
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const SignInScreen()));
             // Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => SignInScreen(),), (route) => true,);
             signOut();
           },

@@ -8,7 +8,7 @@ import 'package:blog_app/services/save_account.dart';
 import 'package:blog_app/ui/screen/blog/edit_blog.dart';
 import 'package:blog_app/ui/screen/item/avatar.dart';
 import 'package:blog_app/ui/screen/profile/profile_tab.dart';
-import 'package:blog_app/utils/constain/my_const.dart';
+import 'package:blog_app/utils/constant/my_const.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
@@ -97,7 +97,8 @@ class _ABlogDetailState extends State<ABlogDetail> {
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontFamily: FONT_CONST.BESTIE.fontFamily)),
-                            Text(account.email),
+                            Text("friend")
+                            // Text(account.email),
                           ],
                         ),
                       ),
