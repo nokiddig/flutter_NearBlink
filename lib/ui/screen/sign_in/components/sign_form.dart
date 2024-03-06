@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../../services/firebase_authentication.dart';
+import '../../../../services/save_account.dart';
 import '../../../components/custom_surfix_icon.dart';
 import '../../../components/form_error.dart';
 import 'package:blog_app/utils/constant/my_const.dart';
@@ -16,10 +18,21 @@ class SignForm extends StatefulWidget {
 
 class _SignFormState extends State<SignForm> {
   final _formKey = GlobalKey<FormState>();
-  String? email;
-  String? password;
-  bool? remember = false;
+  String? _email;
+  String? _password;
+  bool? _remember = false;
   final List<String?> errors = [];
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  SaveAccount saveAccount = SaveAccount();
+
+  @override
+  void initState() {
+    _emailController.text = saveAccount.email;
+    _passwordController.text = saveAccount.pass;
+    _remember = saveAccount.isCheckedSave;
+    super.initState();
+  }
 
   void addError({String? error}) {
     if (!errors.contains(error)) {
@@ -44,8 +57,9 @@ class _SignFormState extends State<SignForm> {
       child: Column(
         children: [
           TextFormField(
+            controller: _emailController,
             keyboardType: TextInputType.emailAddress,
-            onSaved: (newValue) => email = newValue,
+            onSaved: (newValue) => _email = newValue,
             onChanged: (value) {
               if (value.isNotEmpty) {
                 removeError(error: kEmailNullError);
@@ -75,8 +89,9 @@ class _SignFormState extends State<SignForm> {
           ),
           const SizedBox(height: 20),
           TextFormField(
+            controller: _passwordController,
             obscureText: true,
-            onSaved: (newValue) => password = newValue,
+            onSaved: (newValue) => _password = newValue,
             onChanged: (value) {
               if (value.isNotEmpty) {
                 removeError(error: kPassNullError);
@@ -108,11 +123,11 @@ class _SignFormState extends State<SignForm> {
           Row(
             children: [
               Checkbox(
-                value: remember,
+                value: _remember,
                 activeColor: kPrimaryColor,
                 onChanged: (value) {
                   setState(() {
-                    remember = value;
+                    _remember = value;
                   });
                 },
               ),
@@ -136,7 +151,8 @@ class _SignFormState extends State<SignForm> {
                 _formKey.currentState!.save();
                 // if all are valid then go to success screen
                 KeyboardUtil.hideKeyboard(context);
-                Navigator.pushNamed(context, LoginSuccessScreen.routeName);
+                login(_email, _password, _remember);
+                // Navigator.pushNamed(context, LoginSuccessScreen.routeName);
               }
             },
             child: const Text("Continue"),
@@ -145,4 +161,55 @@ class _SignFormState extends State<SignForm> {
       ),
     );
   }
+
+  Future<void> login(email, password, isSave) async {
+    bool checkAccount = false;
+    if (isSave){
+      saveAccount.save(email, password, isSave);
+    }
+    else {
+      saveAccount.clear();
+    }
+
+    await showDialog<bool>(
+      context: context,
+      barrierDismissible: true,
+      builder: (BuildContext dialogContext) {
+        return AlertDialog(
+          title: const Text("Result"),
+          content: FutureBuilder<bool>(
+            future: signInWithEmailAndPassword(email, password),
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return const SizedBox(
+                  height: 100,
+                  child: Center(
+                      child: CircularProgressIndicator()),
+                );
+              }
+              if (snapshot.hasError) {
+                return Text('Error: ${snapshot.error}');
+              } else {
+                if (snapshot.data == true) {
+                  checkAccount = true;
+                  SaveAccount.currentEmail = email;
+                  Navigator.pop(context);
+                  return const Text('Sign in successfully!');
+                } else {
+                  return const Text('The email or password you entered is not correct!');
+                }
+              }
+            },
+          ),
+        );
+      },
+    );
+
+    if (checkAccount == true) {
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginSuccessScreen(),));
+    }
+  }
 }
+
+
+

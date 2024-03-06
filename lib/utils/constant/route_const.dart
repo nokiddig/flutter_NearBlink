@@ -9,6 +9,6 @@ class ROUTE_CONST{
   static final Route ROUTE_HOME = MaterialPageRoute(builder: (context) => HomeTab(),);
   static final Route ROUTE_CATEGORY = MaterialPageRoute(builder: (context) => HomeTab(),);
   static final Route ROUTE_NOTIFICATION = MaterialPageRoute(builder: (context) => HomeTab(),);
-  static final Route ROUTE_SIGNIN = MaterialPageRoute(builder: (context) => SignInScreen(),);
+  // static final Route ROUTE_SIGNIN = MaterialPageRoute(builder: (context) => SignInScreen(),);
   static final Route ROUTE_BOTTOMNAV = MaterialPageRoute(builder: (context) => BottomNavigationApp(),);
 }

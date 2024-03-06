@@ -1,3 +1,4 @@
+import 'package:blog_app/ui/screen/app/bottom_navigation_app.dart';
 import 'package:flutter/material.dart';
 import '../../init_screen.dart';
 
@@ -33,7 +34,9 @@ class LoginSuccessScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, InitScreen.routeName);
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => BottomNavigationApp(),));
+
+                // Navigator.pushNamed(context, InitScreen.routeName);
               },
               child: const Text("Back to home"),
             ),
