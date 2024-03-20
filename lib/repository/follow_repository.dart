@@ -1,6 +1,6 @@
-import 'package:blog_app/model/follow.dart';
-import 'package:blog_app/repository/repository.dart';
-import 'package:blog_app/services/save_account.dart';
+import '../model/follow.dart';
+import '../repository/repository.dart';
+import '../services/save_account.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 import '../utils/constant/my_const.dart';

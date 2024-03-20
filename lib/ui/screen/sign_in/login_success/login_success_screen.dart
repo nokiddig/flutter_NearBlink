@@ -1,4 +1,4 @@
-import 'package:blog_app/ui/screen/app/bottom_navigation_app.dart';
+import '../../../../ui/screen/app/bottom_navigation_app.dart';
 import 'package:flutter/material.dart';
 import '../../init_screen.dart';
 

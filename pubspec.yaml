@@ -1,4 +1,4 @@
-name: blog_app
+name: NearBLink
 description: A new Flutter project.
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -41,12 +41,13 @@ dependencies:
   firebase_auth: ^4.10.1
   shared_preferences: ^2.0.10
   get_it: ^7.6.4
-  flutter_svg: ^2.0.9 # help us to use SVG in our app
-  provider: ^6.1.1
+  provider: ^6.0.5
   lottie: ^2.6.0
   firebase_messaging: ^14.7.1
   firebase_analytics: ^10.6.1
   flutter_local_notifications: ^16.1.1
+  flutter_svg: ^2.0.9
+
 
 dev_dependencies:
   flutter_test:

@@ -1,5 +1,5 @@
-import 'package:blog_app/model/category.dart';
-import 'package:blog_app/ui/screen/item/list_blog.dart';
+import '../../../model/category.dart';
+import '../../../ui/screen/item/list_blog.dart';
 import 'package:flutter/material.dart';
 
 import '../../repository/blog_repository.dart';

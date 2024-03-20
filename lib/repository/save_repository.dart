@@ -1,6 +1,6 @@
-import 'package:blog_app/model/save.dart';
-import 'package:blog_app/repository/repository.dart';
-import 'package:blog_app/services/save_account.dart';
+import '../model/save.dart';
+import '../repository/repository.dart';
+import '../services/save_account.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 import '../utils/constant/firebase_model_const.dart';

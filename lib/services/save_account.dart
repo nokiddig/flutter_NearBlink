@@ -1,5 +1,5 @@
-import 'package:blog_app/services/firebase_authentication.dart';
-import 'package:blog_app/utils/constant/string_const.dart';
+import '../services/firebase_authentication.dart';
+import '../utils/constant/string_const.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
  class  SaveAccount {

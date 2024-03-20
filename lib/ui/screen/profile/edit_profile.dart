@@ -1,5 +1,5 @@
-import 'package:blog_app/services/save_account.dart';
-import 'package:blog_app/utils/constant/my_const.dart';
+import '../../../services/save_account.dart';
+import '../../../utils/constant/my_const.dart';
 import 'package:flutter/material.dart';
 
 import '../../../model/account.dart';

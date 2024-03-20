@@ -1,9 +1,9 @@
-import 'package:blog_app/model/follow.dart';
-import 'package:blog_app/services/save_account.dart';
-import 'package:blog_app/ui/screen/blog/blog_detail.dart';
-import 'package:blog_app/ui/screen/blog/create_blog.dart';
-import 'package:blog_app/ui/screen/profile/edit_profile.dart';
-import 'package:blog_app/utils/constant/my_const.dart';
+import '../../../model/follow.dart';
+import '../../../services/save_account.dart';
+import '../../../ui/screen/blog/blog_detail.dart';
+import '../../../ui/screen/blog/create_blog.dart';
+import '../../../ui/screen/profile/edit_profile.dart';
+import '../../../utils/constant/my_const.dart';
 import 'package:flutter/material.dart';
 
 import '../../../model/account.dart';

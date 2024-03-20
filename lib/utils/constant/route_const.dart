@@ -1,4 +1,4 @@
-import 'package:blog_app/ui/screen/login/signin_screen.dart';
+import '../../ui/screen/login/signin_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

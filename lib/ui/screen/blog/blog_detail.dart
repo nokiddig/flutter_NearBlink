@@ -1,14 +1,14 @@
 // ignore_for_file: curly_braces_in_flow_control_structures
 
-import 'package:blog_app/model/account.dart';
-import 'package:blog_app/model/blog.dart';
-import 'package:blog_app/model/comment.dart';
-import 'package:blog_app/model/like.dart';
-import 'package:blog_app/services/save_account.dart';
-import 'package:blog_app/ui/screen/blog/edit_blog.dart';
-import 'package:blog_app/ui/screen/item/avatar.dart';
-import 'package:blog_app/ui/screen/profile/profile_tab.dart';
-import 'package:blog_app/utils/constant/my_const.dart';
+import '../../../model/account.dart';
+import '../../../model/blog.dart';
+import '../../../model/comment.dart';
+import '../../../model/like.dart';
+import '../../../services/save_account.dart';
+import '../../../ui/screen/blog/edit_blog.dart';
+import '../../../ui/screen/item/avatar.dart';
+import '../../../ui/screen/profile/profile_tab.dart';
+import '../../../utils/constant/my_const.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 

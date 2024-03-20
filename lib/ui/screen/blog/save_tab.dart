@@ -1,5 +1,5 @@
-import 'package:blog_app/ui/screen/blog/blog_detail.dart';
-import 'package:blog_app/utils/constant/my_const.dart';
+import '../../../ui/screen/blog/blog_detail.dart';
+import '../../../utils/constant/my_const.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 

@@ -1,5 +1,5 @@
-import 'package:blog_app/repository/repository.dart';
-import 'package:blog_app/utils/constant/firebase_model_const.dart';
+import '../repository/repository.dart';
+import '../utils/constant/firebase_model_const.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 import '../model/account.dart';

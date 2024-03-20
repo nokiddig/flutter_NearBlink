@@ -1,4 +1,4 @@
-import 'package:blog_app/ui/screen/item/list_blog.dart';
+import '../../../ui/screen/item/list_blog.dart';
 import 'package:flutter/material.dart';
 
 import '../../repository/blog_repository.dart';

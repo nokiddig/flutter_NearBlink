@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:blog_app/utils/constant/my_const.dart';
+import '../../utils/constant/my_const.dart';
 
 import '../screen/login/signup_screen.dart';
 

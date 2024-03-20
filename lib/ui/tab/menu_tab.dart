@@ -1,10 +1,10 @@
-import 'package:blog_app/services/firebase_authentication.dart';
-import 'package:blog_app/services/save_account.dart';
-import 'package:blog_app/ui/screen/profile/edit_profile.dart';
-import 'package:blog_app/ui/screen/profile/profile_tab.dart';
-import 'package:blog_app/ui/screen/blog/save_tab.dart';
-import 'package:blog_app/ui/screen/sign_in/sign_in_screen.dart';
-import 'package:blog_app/utils/constant/my_const.dart';
+import '../../../services/firebase_authentication.dart';
+import '../../../services/save_account.dart';
+import '../../../ui/screen/profile/edit_profile.dart';
+import '../../../ui/screen/profile/profile_tab.dart';
+import '../../../ui/screen/blog/save_tab.dart';
+import '../../../ui/screen/sign_in/sign_in_screen.dart';
+import '../../../utils/constant/my_const.dart';
 import 'package:flutter/material.dart';
 
 class MenuTab extends StatefulWidget {

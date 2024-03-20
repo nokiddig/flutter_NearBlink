@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../components/socal_card.dart';
-import 'package:blog_app/utils/constant/my_const.dart';
+import '../../../utils/constant/my_const.dart';
 import 'components/sign_up_form.dart';
 
 class SignUpScreen extends StatelessWidget {

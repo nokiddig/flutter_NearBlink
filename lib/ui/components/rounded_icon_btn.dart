@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:blog_app/utils/constant/my_const.dart';
+import '../../utils/constant/my_const.dart';
 
 class RoundedIconBtn extends StatelessWidget {
   const RoundedIconBtn({

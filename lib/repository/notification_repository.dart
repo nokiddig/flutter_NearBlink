@@ -1,6 +1,6 @@
-import 'package:blog_app/model/notification.dart';
-import 'package:blog_app/repository/repository.dart';
-import 'package:blog_app/utils/constant/firebase_model_const.dart';
+import '../model/notification.dart';
+import '../repository/repository.dart';
+import '../utils/constant/firebase_model_const.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class NotificationRepository extends Repository<Noti>{

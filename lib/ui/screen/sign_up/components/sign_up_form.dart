@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../components/custom_surfix_icon.dart';
 import '../../../components/form_error.dart';
-import 'package:blog_app/utils/constant/my_const.dart';
+import '../../../../utils/constant/my_const.dart';
 import '../../complete_profile/complete_profile_screen.dart';
 
 class SignUpForm extends StatefulWidget {

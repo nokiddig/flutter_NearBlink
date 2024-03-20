@@ -1,9 +1,9 @@
-import 'package:blog_app/ui/screen/profile/profile_screen.dart';
-import 'package:blog_app/ui/tab/category_tab.dart';
-import 'package:blog_app/ui/tab/home_tab.dart';
+import '../../../ui/screen/profile/profile_screen.dart';
+import '../../../ui/tab/category_tab.dart';
+import '../../../ui/tab/home_tab.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:blog_app/utils/constant/my_const.dart';
+import '../../../utils/constant/my_const.dart';
 
 const Color inActiveIconColor = Color(0xFFB6B6B6);
 
