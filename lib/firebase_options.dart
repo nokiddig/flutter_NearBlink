@@ -50,20 +50,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBkpL5WERuVG753r0G1p90bCRLGGAg0X3A',
-    appId: '1:765635422920:android:8d169b0e33ea15fdb613fd',
-    messagingSenderId: '765635422920',
-    projectId: 'blog-4108c',
-    storageBucket: 'blog-4108c.appspot.com',
+    apiKey: 'AIzaSyD09Q5gyc4OxWUkeOTUmKCnUf8MXOX1bz4',
+    appId: '1:66432764378:android:575b92957f7a55855818e3',
+    messagingSenderId: '66432764378',
+    projectId: 'nearblink-dc889',
+    storageBucket: 'nearblink-dc889.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDtYIESOEg5-Oz3ug1hVn6wiH6ZeG-YXK4',
-    appId: '1:765635422920:ios:089214f67e5ec5c7b613fd',
-    messagingSenderId: '765635422920',
-    projectId: 'blog-4108c',
-    storageBucket: 'blog-4108c.appspot.com',
-    iosClientId: '765635422920-nfb25511kijhrmnd7o72vh210m5hc6b6.apps.googleusercontent.com',
+    apiKey: 'AIzaSyCN2OlYJO1GwaCJ7I5m1278GqtNTRhZ28E',
+    appId: '1:66432764378:ios:b79720eb172f67be5818e3',
+    messagingSenderId: '66432764378',
+    projectId: 'nearblink-dc889',
+    storageBucket: 'nearblink-dc889.appspot.com',
+    iosClientId: '66432764378-oo6qbvv2eg7vhfmhuqtkmnfcp3nf7b5d.apps.googleusercontent.com',
     iosBundleId: 'com.example.blogApp',
   );
 }

@@ -3,9 +3,10 @@ import '../../../services/save_account.dart';
 import '../../../ui/screen/profile/edit_profile.dart';
 import '../../../ui/screen/profile/profile_tab.dart';
 import '../../../ui/screen/blog/save_tab.dart';
-import '../../../ui/screen/sign_in/sign_in_screen.dart';
 import '../../../utils/constant/my_const.dart';
 import 'package:flutter/material.dart';
+
+import '../screen/login/signin_screen.dart';
 
 class MenuTab extends StatefulWidget {
   const MenuTab({super.key});
@@ -68,7 +69,7 @@ class _MenuTabState extends State<MenuTab> {
           leading: UI_CONST.ICON_LOGOUT,
           title: const Text(STRING_CONST.LOGOUT),
           onTap: (){
-            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const SignInScreen()));
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) =>  const SignInScreen()));
             // Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => SignInScreen(),), (route) => true,);
             signOut();
           },

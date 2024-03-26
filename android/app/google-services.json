@@ -1,41 +1,34 @@
 {
   "project_info": {
-    "project_number": "765635422920",
-    "project_id": "blog-4108c",
-    "storage_bucket": "blog-4108c.appspot.com"
+    "project_number": "66432764378",
+    "project_id": "nearblink-dc889",
+    "storage_bucket": "nearblink-dc889.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:765635422920:android:8d169b0e33ea15fdb613fd",
+        "mobilesdk_app_id": "1:66432764378:android:575b92957f7a55855818e3",
         "android_client_info": {
           "package_name": "com.example.blog_app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "765635422920-0gut1qf7svvrie63rn0keghfi10fa4ao.apps.googleusercontent.com",
+          "client_id": "66432764378-eaufrm726sql0v20bj9d6lacadr4a998.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBkpL5WERuVG753r0G1p90bCRLGGAg0X3A"
+          "current_key": "AIzaSyD09Q5gyc4OxWUkeOTUmKCnUf8MXOX1bz4"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "765635422920-0gut1qf7svvrie63rn0keghfi10fa4ao.apps.googleusercontent.com",
+              "client_id": "66432764378-eaufrm726sql0v20bj9d6lacadr4a998.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "765635422920-nfb25511kijhrmnd7o72vh210m5hc6b6.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.blogApp"
-              }
             }
           ]
         }
